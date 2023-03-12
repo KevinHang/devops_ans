@@ -1,0 +1,14 @@
+[master]
+ec2-54-175-224-23.compute-1.amazonaws.com
+
+[worker]
+ec2-3-235-162-60.compute-1.amazonaws.com
+
+[cluster:children]
+master
+worker
+
+[cluster:vars]
+ansible_ssh_user=ubuntu
+ansible_ssh_private_key_file=/home/ubuntu/KevinHang.pem
+ansible_ssh_common_args='-o StrictHostKeyChecking=no'
